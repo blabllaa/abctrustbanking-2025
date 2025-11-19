@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vay Mua Xe - ABCTrustBank</title>
+    <meta name="description" content="Vay mua xe ô tô trả góp tại ABCTrustBank. Lãi suất ưu đãi, hạn mức cao tới 85% giá trị xe, thời gian vay linh hoạt đến 8 năm.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e40af",
+                        secondary: "#1e3a8a",
+                        accent: "#3b82f6",
+                        dark: "#1f2937",
+                        light: "#f8fafc"
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">AB</span>
+                    </div>
+                    <span class="text-xl font-bold text-dark">ABCTrustBank</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-primary font-medium">Trang Chủ</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary transition-colors">Giới Thiệu</a>
+                    <a href="products.html" class="text-gray-600 hover:text-primary transition-colors">Sản Phẩm</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary transition-colors">Liên Hệ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Sở Hữu Xe Sang <br>
+                        <span class="text-blue-200">Vững Vàng Tay Lái</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Hiện thực hóa giấc mơ xế hộp ngay hôm nay với lãi suất chỉ từ <span class="font-bold text-accent">7.5%/năm</span> và phê duyệt siêu tốc.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-white text-primary px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg shadow-lg">
+                            Đăng ký lái thử & Vay
+                        </button>
+                        <a href="products.html" 
+                         class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-primary transition-colors font-semibold text-lg">
+                            Tính toán trả góp
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                        alt="Người đàn ông hạnh phúc bên chiếc xe hơi mới" 
+                        class="rounded-2xl shadow-2xl object-cover h-[400px] w-full"
+                        loading="lazy"
+                    />
+                    <div class="absolute -bottom-4 -left-4 bg-white text-dark p-4 rounded-lg shadow-lg border-l-4 border-accent">
+                        <div class="flex items-center gap-3">
+                            <div class="text-3xl font-bold text-primary">8h</div>
+                            <div class="text-sm text-gray-600 font-medium">Cam kết thời gian<br> thông báo tín dụng</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 py-16 max-w-6xl">
+        <h2 class="text-3xl font-bold text-dark mb-10 text-center">Chi tiết Sản phẩm Vay Mua Ô tô</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-white rounded-2xl shadow-sm p-8 h-full hover:shadow-md transition-shadow border border-gray-100">
+                <h3 class="text-xl font-semibold text-dark mb-6 flex items-center border-b pb-4 border-gray-100">
+                    <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-car text-primary"></i>
+                    </div>
+                    Lợi ích khách hàng
+                </h3>
+                <ul class="space-y-4 text-gray-600">
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-accent mt-1 text-sm"></i>
+                        <span> Vay tới 85% giá trị xe (hoặc 100% nếu có thêm TSBĐ khác).</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-accent mt-1 text-sm"></i>
+                        <span> Thời gian vay linh hoạt lên đến 8 năm.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-accent mt-1 text-sm"></i>
+                        <span> Thế chấp bằng chính chiếc xe dự định mua.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-accent mt-1 text-sm"></i>
+                        <span> Giải ngân ngay khi có giấy hẹn đăng ký xe.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-accent mt-1 text-sm"></i>
+                        <span> Liên kết với các hãng xe lớn (Toyota, Mazda, Mercedes...).</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-accent mt-1 text-sm"></i>
+                        <span> Phương thức trả nợ linh hoạt (trả gốc đều hoặc bậc thang).</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm p-8 h-full hover:shadow-md transition-shadow border border-gray-100">
+                <h3 class="text-xl font-semibold text-dark mb-6 flex items-center border-b pb-4 border-gray-100">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-file-contract text-primary"></i>
+                    </div>
+                    Hồ sơ vay vốn
+                </h3>
+                <p class="text-gray-600 mb-4">Thủ tục đơn giản, hỗ trợ thu hồ sơ tận nơi:</p>
+                
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm text-secondary">
+                                <i class="fas fa-id-badge"></i>
+                            </div>
+                            <span class="font-medium">CMND/CCCD & Sổ hộ khẩu</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm text-secondary">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <span class="font-medium">Chứng minh thu nhập (Lương, cho thuê...)</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm text-secondary">
+                                <i class="fas fa-file-invoice"></i>
+                            </div>
+                            <span class="font-medium">Hợp đồng mua bán xe & Giấy đặt cọc</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm text-secondary">
+                                <i class="fas fa-pen-fancy"></i>
+                            </div>
+                            <span class="font-medium">Đơn đề nghị vay vốn (theo mẫu Ngân hàng)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-6">
+                    <button class="w-full py-3 bg-primary text-white rounded-lg hover:bg-secondary transition-colors font-medium shadow-md">
+                        Gửi yêu cầu tư vấn
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition-shadow border border-gray-100">
+            <h3 class="text-xl font-semibold text-dark mb-8 flex items-center">
+                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-tachometer-alt text-green-600"></i>
+                </div>
+                Thông số & Điều kiện
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div>
+                    <h4 class="font-bold text-dark mb-4 text-lg border-l-4 border-primary pl-3">Đặc điểm gói vay</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                            <span>Loại xe hỗ trợ:</span>
+                            <span class="font-medium text-dark">Xe mới & Xe cũ (đời xe < 5 năm)</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                            <span>Số tiền vay:</span>
+                            <span class="font-medium text-dark">Tối thiểu 100 triệu VND</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                            <span>Lãi suất ưu đãi:</span>
+                            <span class="font-medium text-primary">Cố định 12 tháng đầu</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                            <span>Phí trả nợ trước hạn:</span>
+                            <span class="font-medium text-dark">Miễn phí sau 4 năm</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-dark mb-4 text-lg border-l-4 border-accent pl-3">Điều kiện vay vốn</h4>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start space-x-3 bg-gray-50 p-3 rounded-lg">
+                            <i class="fas fa-user-check text-accent mt-1"></i>
+                            <div>
+                                <strong class="block text-dark text-sm">Đối tượng</strong>
+                                <span class="text-sm">Công dân Việt Nam từ 18 đến 65 tuổi tại thời điểm tất toán khoản vay.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3 bg-gray-50 p-3 rounded-lg">
+                            <i class="fas fa-coins text-accent mt-1"></i>
+                            <div>
+                                <strong class="block text-dark text-sm">Thu nhập</strong>
+                                <span class="text-sm">Thu nhập ổn định, đủ khả năng trả nợ hàng tháng (tối thiểu 8 triệu/tháng).</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="profile" class="py-16 bg-light border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-dark mb-4">Ai Nên Chọn Gói Vay Này?</h2>
+            <p class="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Giải pháp tài chính linh hoạt phù hợp cho cả nhu cầu đi lại cá nhân và kinh doanh
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center group cursor-pointer">
+                    <div class="w-20 h-20 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-users text-accent text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark mb-2">Gia Đình Trẻ</h3>
+                    <p class="text-gray-600 text-sm px-4">
+                        Chiếc xe đầu tiên che mưa nắng, phục vụ những chuyến dã ngoại cuối tuần.
+                    </p>
+                </div>
+                
+                <div class="text-center group cursor-pointer">
+                    <div class="w-20 h-20 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-taxi text-accent text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark mb-2">Kinh Doanh Vận Tải</h3>
+                    <p class="text-gray-600 text-sm px-4">
+                        Vay mua xe chạy dịch vụ, Grab, Taxi với thủ tục chứng minh nguồn thu linh hoạt.
+                    </p>
+                </div>
+                
+                <div class="text-center group cursor-pointer">
+                    <div class="w-20 h-20 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-briefcase text-accent text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark mb-2">Doanh Nhân</h3>
+                    <p class="text-gray-600 text-sm px-4">
+                        Sở hữu các dòng xe sang (Mercedes, BMW...) để nâng tầm vị thế đối tác.
+                    </p>
+                </div>
+                
+                <div class="text-center group cursor-pointer">
+                    <div class="w-20 h-20 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-exchange-alt text-accent text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark mb-2">Nâng Đời Xe</h3>
+                    <p class="text-gray-600 text-sm px-4">
+                        Bán xe cũ, vay thêm để đổi sang dòng xe mới hiện đại và an toàn hơn.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">ABCTrustBank</h3>
+                    <p class="text-gray-400">Xây dựng tương lai tài chính với uy tín và đổi mới từ năm 2025.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Sản Phẩm</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Personal Banking</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Business Solutions</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Loans</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Investment Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Hỗ Trợ</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Trung tâm trợ giúp</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Liên hệ chúng tôi</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Mẹo bảo mật</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Kết Nối Với Chúng Tôi</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; ĐÂY LÀ SẢN PHẨM PHỤC VỤ CHO ĐỒ ÁN MÔN HỌC QUẢN LÝ DỰ ÁN CÔNG NGHỆ THÔNG TIN.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

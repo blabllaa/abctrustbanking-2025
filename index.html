@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABCTrustBank - Giải pháp tài chính</title>
+    <meta name="description" content="ABCTrustBank cung cấp các giải pháp tài chính toàn diện bao gồm ngân hàng cá nhân, tài khoản doanh nghiệp, khoản vay và dịch vụ đầu tư.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e40af",
+                        secondary: "#1e3a8a",
+                        accent: "#3b82f6",
+                        dark: "#1f2937",
+                        light: "#f8fafc"
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">AB</span>
+                    </div>
+                    <span class="text-xl font-bold text-dark">ABCTrustBank</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-primary font-medium">Trang Chủ</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary transition-colors">Giới Thiệu</a>
+                    <a href="products.html" class="text-gray-600 hover:text-primary transition-colors">Sản Phẩm</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary transition-colors">Liên Hệ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main id="main-content">
+        <section id="home" class="page-section active">
+            <div class="bg-gradient-to-br from-primary via-blue-800 to-secondary text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-2/3 h-full bg-white opacity-5 skew-x-12 transform translate-x-32 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-400 rounded-full blur-3xl opacity-20 pointer-events-none"></div>
+                <div class="container mx-auto px-4 pt-12 pb-20 md:pt-20 md:pb-24 relative z-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div class="text-center md:text-left">
+                            <span class="inline-block bg-blue-500 bg-opacity-20 border border-blue-400 text-blue-100 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 shadow-sm backdrop-blur-sm">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i> #10 Ngân hàng số 2025
+                            </span>
+                            <h1 class="text-5xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight tracking-tight">
+                                Ngân Hàng Thông Minh <br>
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-cyan-200">Cho Tương Lai</span>
+                            </h1>
+                            <p class="text-lg text-blue-100 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                                Trải nghiệm dịch vụ tài chính đỉnh cao. Mở tài khoản trực tuyến chỉ trong 3 phút với công nghệ định danh eKYC.
+                            </p>
+
+                            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                                <button class="bg-white text-primary px-8 py-3.5 rounded-xl font-bold hover:bg-blue-50 transition-all transform hover:-translate-y-1 shadow-lg flex items-center justify-center group">
+                                    <span>Mở Tài Khoản Ngay</span>
+                                </button>
+                                <a href="products.html" class="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white px-8 py-3.5 rounded-xl font-semibold hover:bg-white/20 transition-all">
+                                    Tìm Sản Phẩm
+                                </a>
+                            </div>
+                        </div> 
+                        <div class="relative hidden md:flex justify-center items-center">
+                            <div class="relative z-10 w-full max-w-lg mx-auto">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1000&auto=format&fit=crop" 
+                                    alt="Ứng dụng ngân hàng" 
+                                    class="rounded-3xl shadow-2xl border-8 border-white/10 w-full h-auto object-cover"
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="container mx-auto px-4 py-16 bg-white">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Tại Sao Chọn ABCTrustBank?</h2>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">Chúng tôi cung cấp các giải pháp tài chính toàn diện phù hợp với nhu cầu và mục tiêu riêng của bạn.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 text-center border border-gray-100 group">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors duration-300">
+                            <i class="fas fa-shield-alt text-primary text-2xl group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">An Toàn Tuyệt Đối</h3>
+                        <p class="text-gray-600 leading-relaxed">Hệ thống bảo mật đa lớp và bảo hiểm tiền gửi, đảm bảo tài sản của bạn luôn an toàn.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 text-center border border-gray-100 group">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors duration-300">
+                            <i class="fas fa-percentage text-primary text-2xl group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Lãi Suất Cạnh Tranh</h3>
+                        <p class="text-gray-600 leading-relaxed">Tối ưu hóa lợi nhuận của bạn với mức lãi suất tiết kiệm và vay vốn tốt nhất thị trường.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 text-center border border-gray-100 group">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-colors duration-300">
+                            <i class="fas fa-mobile-alt text-primary text-2xl group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">Ngân Hàng Số 4.0</h3>
+                        <p class="text-gray-600 leading-relaxed">Quản lý tài chính, chuyển khoản, thanh toán hóa đơn mọi lúc mọi nơi chỉ với một chạm.</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="container mx-auto px-4 py-16 bg-gray-50 rounded-3xl my-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-primary font-bold uppercase tracking-widest text-sm mb-2">Giải pháp toàn diện</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark">Dịch Vụ Trọng Tâm</h2>
+                    <div class="w-20 h-1.5 bg-accent mx-auto mt-4 rounded-full"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-primary hover:shadow-lg transition-all cursor-pointer group relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-blue-50 rounded-bl-full -mr-10 -mt-10 group-hover:bg-primary/10 transition-colors"></div>
+                        
+                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-primary transition-colors duration-300">
+                            <i class="fas fa-user-tie text-2xl text-primary group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Ngân hàng Cá nhân</h3>
+                        <p class="text-gray-600 mb-4">Giải pháp tài chính linh hoạt cho cuộc sống hàng ngày của bạn.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-gray-500 text-sm"><i class="fas fa-check-circle text-green-500 mr-2"></i> Miễn phí chuyển tiền trọn đời</li>
+                            <li class="flex items-center text-gray-500 text-sm"><i class="fas fa-check-circle text-green-500 mr-2"></i> Thẻ tín dụng hoàn tiền 5%</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-indigo-600 hover:shadow-lg transition-all cursor-pointer group relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-indigo-50 rounded-bl-full -mr-10 -mt-10 group-hover:bg-indigo-600/10 transition-colors"></div>
+
+                        <div class="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-indigo-600 transition-colors duration-300">
+                            <i class="fas fa-building text-2xl text-indigo-600 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Khách hàng Doanh nghiệp</h3>
+                        <p class="text-gray-600 mb-4">Đồng hành cùng doanh nghiệp vươn tầm quốc tế với vốn vay ưu đãi.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-gray-500 text-sm"><i class="fas fa-check-circle text-green-500 mr-2"></i> Quản lý dòng tiền 24/7</li>
+                            <li class="flex items-center text-gray-500 text-sm"><i class="fas fa-check-circle text-green-500 mr-2"></i> Tài trợ thương mại quốc tế</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-accent hover:shadow-lg transition-all cursor-pointer group relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-blue-50 rounded-bl-full -mr-10 -mt-10 group-hover:bg-accent/10 transition-colors"></div>
+
+                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-accent transition-colors duration-300">
+                            <i class="fas fa-chart-pie text-2xl text-accent group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-dark">Đầu tư & Bảo hiểm</h3>
+                        <p class="text-gray-600 mb-4">Bảo vệ tương lai và gia tăng tài sản bền vững với chuyên gia.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-gray-500 text-sm"><i class="fas fa-check-circle text-green-500 mr-2"></i> Đa dạng danh mục quỹ mở</li>
+                            <li class="flex items-center text-gray-500 text-sm"><i class="fas fa-check-circle text-green-500 mr-2"></i> Bảo hiểm nhân thọ liên kết</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+
+<footer class="bg-dark text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold mb-4">ABCTrustBank</h3>
+                <p class="text-gray-400">Xây dựng tương lai tài chính với uy tín và đổi mới từ năm 2025.</p>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Sản Phẩm</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Personal Banking</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Business Solutions</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Loans</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Investment Services</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Hỗ Trợ</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Trung tâm trợ giúp</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Liên hệ chúng tôi</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Mẹo bảo mật</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Kết Nối Với Chúng Tôi</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; ĐÂY LÀ SẢN PHẨM PHỤC VỤ CHO ĐỒ ÁN MÔN HỌC QUẢN LÝ DỰ ÁN CÔNG NGHỆ THÔNG TIN.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

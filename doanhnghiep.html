@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vay Doanh Nghiệp - ABCTrustBank</title>
+    <meta name="description" content="Giải pháp vốn vay doanh nghiệp tại ABCTrustBank: Bổ sung vốn lưu động, mua sắm tài sản cố định, tài trợ dự án với lãi suất cạnh tranh và thủ tục nhanh gọn.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e40af",
+                        secondary: "#1e3a8a",
+                        accent: "#3b82f6",
+                        dark: "#1f2937",
+                        light: "#f8fafc"
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">AB</span>
+                    </div>
+                    <span class="text-xl font-bold text-dark">ABCTrustBank</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-primary font-medium">Trang Chủ</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary transition-colors">Giới Thiệu</a>
+                    <a href="products.html" class="text-gray-600 hover:text-primary transition-colors">Sản Phẩm</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary transition-colors">Liên Hệ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight">
+                        Nguồn Vốn Vững Chắc <br>
+                        <span class="text-blue-200">Bứt Phá Thành Công</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-blue-100">
+                        Đồng hành cùng sự phát triển của doanh nghiệp với gói vay ưu đãi, lãi suất chỉ từ <span class="font-bold text-accent">5.5%/năm</span> và hạn mức linh hoạt.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-white text-primary px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg shadow-lg">
+                            Đăng ký tư vấn
+                        </button>
+                        <a href="products.html" 
+                         class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-primary transition-colors font-semibold text-lg">
+                            Xem biểu lãi suất
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                        alt="Doanh nhân thảo luận chiến lược kinh doanh" 
+                        class="rounded-2xl shadow-2xl object-cover h-[400px] w-full"
+                        loading="lazy"
+                    />
+                    <div class="absolute -bottom-4 -left-4 bg-white text-dark p-4 rounded-lg shadow-lg border-l-4 border-accent">
+                        <div class="flex items-center gap-3">
+                            <div class="text-3xl font-bold text-primary">24h</div>
+                            <div class="text-sm text-gray-600 font-medium">Phê duyệt hồ sơ<br>nhanh chóng</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 py-16 max-w-6xl">
+        <h2 class="text-3xl font-bold text-dark mb-10 text-center">Chi tiết Sản phẩm Vay Doanh Nghiệp</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-white rounded-2xl shadow-sm p-8 h-full hover:shadow-md transition-shadow border border-gray-100">
+                <h3 class="text-xl font-semibold text-dark mb-6 flex items-center border-b pb-4 border-gray-100">
+                    <div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-chart-line text-primary"></i>
+                    </div>
+                    Lợi ích doanh nghiệp
+                </h3>
+                <ul class="space-y-4 text-gray-600">
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-accent mt-1 text-sm"></i>
+                        <span> Hạn mức vay cao, đáp ứng đến 100% nhu cầu vốn.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-accent mt-1 text-sm"></i>
+                        <span> Đa dạng hình thức: Vay món, Hạn mức tín dụng, Thấu chi.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-accent mt-1 text-sm"></i>
+                        <span> Tài sản bảo đảm linh hoạt (BĐS, Máy móc, Hàng tồn kho, Quyền đòi nợ).</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-accent mt-1 text-sm"></i>
+                        <span> Ưu đãi phí thanh toán quốc tế và chuyển tiền.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-accent mt-1 text-sm"></i>
+                        <span> Tư vấn giải pháp tài chính chuyên sâu theo ngành nghề.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-check text-accent mt-1 text-sm"></i>
+                        <span> Thời gian giải ngân siêu tốc cho khách hàng SME.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm p-8 h-full hover:shadow-md transition-shadow border border-gray-100">
+                <h3 class="text-xl font-semibold text-dark mb-6 flex items-center border-b pb-4 border-gray-100">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-folder-open text-primary"></i>
+                    </div>
+                    Hồ sơ pháp lý
+                </h3>
+                <p class="text-gray-600 mb-4">Bộ hồ sơ tiêu chuẩn để thẩm định nhanh:</p>
+                
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm text-secondary">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <span class="font-medium">Giấy phép ĐKKD & Điều lệ công ty</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm text-secondary">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <span class="font-medium">Báo cáo tài chính (2 năm gần nhất)</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm text-secondary">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <span class="font-medium">Phương án kinh doanh / Dự án đầu tư</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm text-secondary">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <span class="font-medium">Hồ sơ tài sản bảo đảm (nếu có)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-6">
+                    <button class="w-full py-3 bg-primary text-white rounded-lg hover:bg-secondary transition-colors font-medium shadow-md">
+                        Liên hệ chuyên viên KHDN
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition-shadow border border-gray-100">
+            <h3 class="text-xl font-semibold text-dark mb-8 flex items-center">
+                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-cogs text-green-600"></i>
+                </div>
+                Thông số & Điều kiện vay
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div>
+                    <h4 class="font-bold text-dark mb-4 text-lg border-l-4 border-primary pl-3">Đặc điểm gói vay</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                            <span>Loại tiền vay:</span>
+                            <span class="font-medium text-dark">VND, USD</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                            <span>Mục đích vay:</span>
+                            <span class="font-medium text-dark">Vốn lưu động, Mua TSCĐ, Dự án</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                            <span>Thời hạn vay:</span>
+                            <span class="font-medium text-dark">Đến 10 năm (đối với vay đầu tư)</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                            <span>Phương thức trả nợ:</span>
+                            <span class="font-medium text-primary">Linh hoạt theo dòng tiền doanh nghiệp</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-dark mb-4 text-lg border-l-4 border-accent pl-3">Điều kiện doanh nghiệp</h4>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start space-x-3 bg-gray-50 p-3 rounded-lg">
+                            <i class="fas fa-building text-accent mt-1"></i>
+                            <div>
+                                <strong class="block text-dark text-sm">Hoạt động pháp lý</strong>
+                                <span class="text-sm">Doanh nghiệp thành lập hợp pháp tại Việt Nam, hoạt động tối thiểu 12 tháng.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3 bg-gray-50 p-3 rounded-lg">
+                            <i class="fas fa-history text-accent mt-1"></i>
+                            <div>
+                                <strong class="block text-dark text-sm">Lịch sử tín dụng</strong>
+                                <span class="text-sm">Không có nợ xấu tại bất kỳ tổ chức tín dụng nào. Tình hình tài chính minh bạch.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="profile" class="py-16 bg-light border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-dark mb-4">Đối Tác Tin Cậy Của Mọi Doanh Nghiệp</h2>
+            <p class="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Chúng tôi thiết kế các giải pháp tài chính chuyên biệt cho từng loại hình và quy mô doanh nghiệp
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center group cursor-pointer">
+                    <div class="w-20 h-20 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-store text-accent text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark mb-2">Doanh Nghiệp SME</h3>
+                    <p class="text-gray-600 text-sm px-4">
+                        Bổ sung vốn lưu động nhanh chóng để nắm bắt cơ hội kinh doanh tức thời.
+                    </p>
+                </div>
+                
+                <div class="text-center group cursor-pointer">
+                    <div class="w-20 h-20 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-industry text-accent text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark mb-2">Sản Xuất & Chế Biến</h3>
+                    <p class="text-gray-600 text-sm px-4">
+                        Vay đầu tư mua sắm máy móc, mở rộng nhà xưởng, dây chuyền công nghệ.
+                    </p>
+                </div>
+                
+                <div class="text-center group cursor-pointer">
+                    <div class="w-20 h-20 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-ship text-accent text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark mb-2">Xuất Nhập Khẩu</h3>
+                    <p class="text-gray-600 text-sm px-4">
+                        Tài trợ thương mại, L/C, thanh toán quốc tế và bảo hiểm tỷ giá.
+                    </p>
+                </div>
+                
+                <div class="text-center group cursor-pointer">
+                    <div class="w-20 h-20 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">
+                        <i class="fas fa-rocket text-accent text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark mb-2">Start-up Tiềm Năng</h3>
+                    <p class="text-gray-600 text-sm px-4">
+                        Hỗ trợ vốn cho các dự án khả thi với sự tư vấn từ chuyên gia tài chính.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">ABCTrustBank</h3>
+                    <p class="text-gray-400">Xây dựng tương lai tài chính với uy tín và đổi mới từ năm 2025.</p>
+                </div>
+                
+                <!-- Sản phẩm -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Sản Phẩm</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Personal Banking</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Business Solutions</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Loans</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Investment Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Hỗ Trợ</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Trung tâm trợ giúp</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Liên hệ chúng tôi</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Mẹo bảo mật</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Kết Nối Với Chúng Tôi</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; ĐÂY LÀ SẢN PHẨM PHỤC VỤ CHO ĐỒ ÁN MÔN HỌC QUẢN LÝ DỰ ÁN CÔNG NGHỆ THÔNG TIN.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

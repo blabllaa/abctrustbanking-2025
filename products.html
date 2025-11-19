@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABCTrustBank - Giải pháp tài chính</title>
+    <meta name="description" content="ABCTrustBank cung cấp các giải pháp tài chính toàn diện bao gồm ngân hàng cá nhân, tài khoản doanh nghiệp, khoản vay và dịch vụ đầu tư.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e40af",
+                        secondary: "#1e3a8a",
+                        accent: "#3b82f6",
+                        dark: "#1f2937",
+                        light: "#f8fafc"
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">AB</span>
+                    </div>
+                    <span class="text-xl font-bold text-dark">ABCTrustBank</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-primary font-medium">Trang Chủ</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary transition-colors">Giới Thiệu</a>
+                    <a href="products.html" class="text-gray-600 hover:text-primary transition-colors">Sản Phẩm</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary transition-colors">Liên Hệ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+            <!-- Loan Calculator Section -->
+            <div class="bg-light py-16">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Công Cụ Tính Lãi Vay</h2>
+                        <p class="text-gray-600 text-lg">Tính toán khoản thanh toán hàng tháng và tổng lãi suất cho các tùy chọn vay khác nhau.</p>
+                    </div>
+                    
+                    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            <!-- Input Form -->
+                            <div>
+                                <div class="space-y-6">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Số Tiền Vay (VND)</label>
+                                        <input type="number" id="loanAmount" min="1000000" max="10000000000" step="1000000" value="50000000" 
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-lg">
+                                        <div class="flex justify-between text-sm text-gray-600 mt-2">
+                                            <span>Tối thiểu: 1.000.000 VND</span>
+                                            <span>Tối đa: 10.000.000.000 VND</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Lãi Suất (%)</label>
+                                        <input type="number" id="interestRate" min="1" max="20" step="0.1" value="5.5" 
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-lg">
+                                        <div class="flex justify-between text-sm text-gray-600 mt-2">
+                                            <span>Tối thiểu: 1%</span>
+                                            <span>Tối đa: 20%</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Thời Hạn Vay (Năm)</label>
+                                        <input type="number" id="loanTerm" min="1" max="30" step="1" value="1" 
+                                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-lg">
+                                        <div class="flex justify-between text-sm text-gray-600 mt-2">
+                                            <span>Tối thiểu: 1 năm</span>
+                                            <span>Tối đa: 30 năm</span>
+                                        </div>
+                                    </div>
+
+                                    <button onclick="calculateLoan()" class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition-colors text-lg">
+                                        Tính Lãi
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Results -->
+                            <div class="bg-primary text-white rounded-lg p-6">
+                                <h3 class="text-xl font-semibold mb-8 text-center border-b border-blue-400 pb-4">Tóm Tắt Khoản Vay</h3>
+                                <div class="space-y-6">
+                                    <div class="bg-white/10 rounded-lg p-4 space-y-3">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-blue-100">Thanh Toán Hàng Tháng</span>
+                                        <span id="monthlyPayment" class="text-xl font-semibold text-accent text-yellow-300"></span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-blue-100">Tổng Lãi</span>
+                                        <span id="totalInterest" class="text-xl font-semibold"></span>
+                                    </div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-blue-100">Tổng Thanh Toán</span>
+                                        <span id="totalPayment" class="text-xl font-semibold"></span>
+                                    </div>
+                                    <div class="pt-4 border-t border-white/20">
+                                        <div class="flex justify-between text-sm">
+                                            <span class="text-blue-100">Số Tiền Gốc</span>
+                                            <span id="principalAmount"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Products Page -->
+        <section id="products" class="page-section block md:block">
+            <div class="container mx-auto px-4 py-16">
+                <h1 class="text-4xl font-bold text-dark mb-8 text-center">Sản Phẩm Tài Chính</h1>
+                <p class="text-gray-600 text-lg text-center mb-12 max-w-2xl mx-auto">Khám phá các sản phẩm tài chính toàn diện đáp ứng nhu cầu ngân hàng cá nhân và doanh nghiệp của bạn.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <img src="https://img.freepik.com/free-photo/mother-teaching-her-daughter-about-savings_53876-139539.jpg?semt=ais_hybrid&w=740&q=80" alt="Tài khoản tiết kiệm cá nhân" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-dark mb-2">Tiết Kiệm Cá Nhân</h3>
+                            <p class="text-gray-600 mb-4">Tài khoản tiết kiệm lãi suất cao. Kỳ hạn gửi đa dạng, phù hợp với nhiều nhu cầu gửi.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-semibold">3.5%/năm</span>
+                                <a href="tietkiem.html" 
+   class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors">
+   Tìm Hiểu Thêm
+</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <img src="https://media.istockphoto.com/id/1064169272/photo/house-and-coins-stack.jpg?s=612x612&w=0&k=20&c=QyPP_qFUbp2neMn8Na1nQXvim1v8MTwuQ9BIg3a1erE=" alt="Vay mua nhà" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-dark mb-2">Vay Mua Nhà</h3>
+                            <p class="text-gray-600 mb-4">Vay mua nhà linh hoạt, trả trước thấp, lãi suất cố định cạnh tranh.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-semibold">Từ 3.5%</span>
+                                <a href="muanha.html" 
+                                 class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors">
+                                    Tìm Hiểu Thêm
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <img src="https://media.istockphoto.com/id/183865137/photo/businessman-is-stacking-coins.jpg?s=612x612&w=0&k=20&c=rDVeQzFvLgLjXjefOns_s_NMo7Rfn71wVa3Q0uGoPio=" alt="Vay doanh nghiệp" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-dark mb-2">Vay Doanh Nghiệp</h3>
+                            <p class="text-gray-600 mb-4">Vốn phát triển kinh doanh, mở rộng và hoạt động với điều khoản linh hoạt.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-semibold">Từ 4.2%</span>
+                                <a href="doanhnghiep.html" 
+                                 class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors">
+                                    Tìm Hiểu Thêm
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <img src="https://www.shutterstock.com/image-photo/man-hand-hold-car-stack-600nw-2468937765.jpg" alt="Vay mua xe" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-dark mb-2">Vay Mua Xe</h3>
+                            <p class="text-gray-600 mb-4">Sở hữu xe dễ dàng với lãi suất thấp và phê duyệt nhanh.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-semibold">Từ 5%</span>
+                                <a href="muaxe.html" 
+                                 class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors">
+                                    Tìm Hiểu Thêm
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function calculateLoan() {
+            const amount = parseFloat(document.getElementById('loanAmount').value);
+            const rate = parseFloat(document.getElementById('interestRate').value) / 100;
+            const years = parseFloat(document.getElementById('loanTerm').value);
+            const monthlyRate = rate / 12;
+            const n = years * 12;
+            const monthlyPayment = amount * monthlyRate / (1 - Math.pow(1 + monthlyRate, -n));
+            const totalPayment = monthlyPayment * n;
+            const totalInterest = totalPayment - amount;
+
+            document.getElementById('monthlyPayment').innerText = monthlyPayment.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'});
+            document.getElementById('totalPayment').innerText = totalPayment.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'});
+            document.getElementById('totalInterest').innerText = totalInterest.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'});
+            document.getElementById('principalAmount').innerText = amount.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'});
+        }
+    </script>
+</body>
+
+
+<footer class="bg-dark text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Thông tin ngân hàng -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">ABCTrustBank</h3>
+                <p class="text-gray-400">Xây dựng tương lai tài chính với uy tín và đổi mới từ năm 2025.</p>
+            </div>
+            
+            <!-- Sản phẩm -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Sản Phẩm</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Personal Banking</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Business Solutions</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Loans</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Investment Services</a></li>
+                </ul>
+            </div>
+            
+            <!-- Hỗ trợ -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Hỗ Trợ</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white transition-colors">Trung tâm trợ giúp</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Liên hệ chúng tôi</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Mẹo bảo mật</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+            
+            <!-- Kết nối -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Kết Nối Với Chúng Tôi</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bản quyền -->
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; ĐÂY LÀ SẢN PHẨM PHỤC VỤ CHO ĐỒ ÁN MÔN HỌC QUẢN LÝ DỰ ÁN CÔNG NGHỆ THÔNG TIN.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
